@@ -13,5 +13,7 @@ dependencies = [
     "langchain-openai>=1.2.1",
     "langgraph>=1.2.0",
     "langsmith[openai-agents]>=0.8.5",
+    "pydf>=12",
+    "pypdf>=6.14.2",
     "python-dotenv>=1.2.2",
 ]
