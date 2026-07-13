@@ -38,10 +38,13 @@ def similarity_search():
 
     docs = [
         "Python is a programming language",
-        "JavaScript is used for web development",
+        "JavaScript is the programming language for web development",
         "Machine learning enables AI applications",
         "Deep learning uses neural networks",
         "Cats are popular pets",
+        "C is a programming language used for low level programming",
+        "HTML is a standardized system for tagging text files to achieve font, colour, graphic, and hyperlink effects on web pages.",
+        "1010100",
     ]
 
     query = "What programming languages exist?"
@@ -58,6 +61,7 @@ def similarity_search():
 
     # rank documents by similarity
     ranked_docs = sorted(zip(docs, similarities), key=lambda x: x[1], reverse=True)
+    print(f"Ranked docs: {ranked_docs}")
 
     print(f"Query: {query}\n")
     print("Ranked by similarity:")
@@ -100,5 +104,5 @@ def embedding_caching():
 if __name__ == "__main__":
     # batch_embeddings()
     # basic_embeddings()
-    # similarity_search()
-    embedding_caching()
+    similarity_search()
+    # embedding_caching()
